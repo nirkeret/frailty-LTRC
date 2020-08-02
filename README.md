@@ -1,5 +1,6 @@
 # frailty-LTRC
 The "Estimation Procedure" file contains the code for running the algorithm. It can be given real data or simulated data, such as by the means of the codes provided for sampling from the gamma or IG/PS frailties.
+Before running the estimation procedure, the cpp file in this directory should be placed in the same working directory (or elsewhere, but the cpp file should be read before executing the estimation procedure).
 Detailed descriptions for how to run the estimation code are provided as comments on the code itself, but for convenience it is repeated here:
 
 ## Function Arguments 
