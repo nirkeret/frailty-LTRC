@@ -44,11 +44,11 @@ H023_real <- function(t)
 ######## creating reference data - mimicking the marginal death in the population below recL - 
 
 nnn <- 100000
-z1 <- runif(nn) ; z2 <- runif(nn) ; z3 <- runif(nn); z4 <- runif(nn)
-z <- cbind(z1,z2,z3,z4)
+z1 <- runif(nn) ; z2 <- runif(nn) ; z3 <- runif(nn)
+z <- cbind(z1,z2,z3)
 
 omega_ref <- rgamma(nnn,shape = 1/theta,scale = theta)
-u12_ref <- runif(nnn) ; u13_ref <- runif(nnn)
+u13_ref <- runif(nnn)
 
 Z12 <- z[,1:3] ; Z13 <- z[,1:2]
 egz12_ref <- exp(Z12 %*% g12)
