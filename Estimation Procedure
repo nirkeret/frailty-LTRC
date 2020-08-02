@@ -33,7 +33,7 @@ sourceCpp("frailty_LT_age_weights_brob.cpp", verbose=TRUE)
 # seed - controlling the seed for the weights generation. Defaults to 1
 # save_address - a local address to save interim results. After each bootstrap round the results will be saved to the address provided. The address should direct to a folder, where 5 files will be saved: H012,H013,H023,parameters,convergence. 
 # check_times - a vector of times to be inserted into the H0 functions, for saving the results. Defaults to a grid of equally spaced values between 0 and max(observed time)
-# inf_f - inflation factor. If, in order to save computation time, only a sub-sample of the censored observations is used, an iflation factor should be provided for the sampled observations (an IPW approach). Defaults to 1 (all censored observations are used)
+# inf_f - inflation factor. If, in order to save computation time, only a sub-sample of the censored observations is used (a case-cohort design), an iflation factor should be provided for the sampled observations (an IPW approach). Defaults to 1 (all censored observations are used).
 
 estimate_all <- function(z12,z13,z23,obs_times1,obs_times2,delta1,delta2,delta3,R=rep(0,length(obs_times1)),RecL=0,marginal_13_haz=NULL,marginal_13_grid=NULL,n_Bootstrap=0,tol=0.001,max_Iter=100,initial_pars=NULL,initial_H=NULL,seed=1,save_address=NULL,name=NULL,check_times=seq(0,max(obs_times1,obs_times2),length.out = 100),inf_f = 1)
 {
@@ -451,11 +451,3 @@ estimate_all <- function(z12,z13,z23,obs_times1,obs_times2,delta1,delta2,delta3,
   
 }
 
-
-
-## example for how to run the estimating function:
-estimate_all(z12=Z12,z13 = Z13,z23 = Z23,obs_times1=V,obs_times2=W,delta1 = delta1,delta2=delta2,
-             delta3=delta3,R=R,RecL = 0.05,
-             n_Bootstrap = 10,save_address = "C:/Users/User/Desktop",name=paste0("simulation number_",seed),
-             initial_pars = c(theta,g12,g13,g23),initial_H = list(H012_real,H013_real,H023_real),check_times = seq(0,0.61,0.01),
-             marginal_13_haz = h13_rates, marginal_13_grid = h13_grid_times)
