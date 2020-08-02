@@ -48,7 +48,7 @@ check_times - a vector of times to be inserted into the H0 functions, for saving
 inf_f - inflation factor. If, in order to save computation time, only a sub-sample of the censored observations is used (a case-cohort design), an iflation factor should be provided for the sampled observations (an IPW approach). Defaults to 1 (all censored observations are used).
 
 ## Example for running the algorithm
-Suppose that we have a dataset like the pseudo-dataset, simulated using the gamma frailty sampling procedure. In the following lines, the real parameters were given to the function as starting values.
+Suppose that we have a dataset like the pseudo-dataset, simulated using the gamma frailty sampling procedure. In the following lines, the real parameters used in the simulations were given to the function as starting values (for demonstration).
 
 estimate_all(z12=Z12,z13 = Z13,z23 = Z23,obs_times1=V,obs_times2=W,delta1 = delta1,delta2=delta2,
              delta3=delta3,R=R,RecL = 0.05,
