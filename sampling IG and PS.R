@@ -68,7 +68,7 @@ z1 <- runif(nnn) ; z2 <- runif(nnn) ; z3 <- runif(nnn);
 z <- cbind(z1,z2,z3)
 
 omega_ref <- frailty.ps(nnn,tau)
-u12_ref <- runif(nnn) ; u13_ref <- runif(nnn)
+u13_ref <- runif(nnn)
 
 Z12 <- z[,1:3] ; Z13 <- z[,1:2]
 egz12_ref <- exp(Z12 %*% g12)
