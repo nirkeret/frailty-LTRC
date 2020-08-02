@@ -3,7 +3,7 @@ The "Estimation Procedure" file contains the code for running the algorithm. It 
 Before running the estimation procedure, the cpp file in this directory should be placed in the same working directory (or elsewhere, but the cpp file should be read before executing the estimation procedure).
 Detailed descriptions for how to run the estimation code are provided as comments on the code itself, but for convenience it is repeated here:
 
-## Function Arguments 
+## Estimation Function Arguments 
 
 z12 - covariate matrix (n_subjects X n_covariates) for the healthy-disease process.
 
@@ -55,3 +55,7 @@ estimate_all(z12=Z12,z13 = Z13,z23 = Z23,obs_times1=V,obs_times2=W,delta1 = delt
              n_Bootstrap = 10,save_address = "C:/Users/User/Desktop",name=paste0("simulation number_",seed),
              initial_pars = c(theta,g12,g13,g23),initial_H = list(H012_real,H013_real,H023_real),check_times = seq(0,0.61,0.01),
              marginal_13_haz = h13_rates, marginal_13_grid = h13_grid_times)
+
+## Sampling Procedures
+The codes for sampling data according to gamma/IG/PS frailties are provided. The data are generated assuming piecewise constant hazards with 2 breaking points.
+If the minimal recruitment age is larger than 0, an additonal piece of code is used to generate the "population", and from there extract a grid of marginal hazards for the marginal healthy-death process. 
