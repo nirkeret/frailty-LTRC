@@ -57,5 +57,5 @@ estimate_all(z12=Z12,z13 = Z13,z23 = Z23,obs_times1=V,obs_times2=W,delta1 = delt
              marginal_13_haz = h13_rates, marginal_13_grid = h13_grid_times)
 
 ## Sampling Procedures
-The codes for sampling data according to gamma/IG/PS frailties are provided. The data are generated assuming piecewise constant hazards with 2 breaking points.
+The codes for sampling data according to gamma/IG/PS frailties are provided. The data are generated assuming piecewise constant hazards with 2 breaking points, as stated in section 5 of our paper.
 If the minimal recruitment age is larger than 0, an additonal piece of code is used to generate the "population", and from there extract a grid of marginal hazards for the marginal healthy-death process. 
