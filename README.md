@@ -59,3 +59,7 @@ estimate_all(z12=Z12,z13 = Z13,z23 = Z23,obs_times1=V,obs_times2=W,delta1 = delt
 ## Sampling Procedures
 The codes for sampling data according to gamma/IG/PS frailties are provided. The data are generated assuming piecewise constant hazards with 2 breaking points, as stated in section 5 of our paper.
 If the minimal recruitment age is larger than 0, an additonal piece of code is used to generate the "population", and from there extract a grid of marginal hazards for the marginal healthy-death process. 
+
+## UK Biobank Data
+The data used for the analysis in the paper are not publicly available. For access to be granted, it is required to submit an application directly to the UKB organization. Additional details regarding the application process, costs, and requirements can be found at the official webpage of the UKbiobank at: 
+https://www.ukbiobank.ac.uk/scientists-3/
